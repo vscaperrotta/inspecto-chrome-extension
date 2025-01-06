@@ -1,6 +1,9 @@
 {
   "name": "css-scanner-chrome-extension",
+  "displayName": "CSS Scanner",
+  "description": "A simple CSS scanner React-Base as a Chrome extension",
   "version": "0.0.0",
+  "private": true,
   "author": "Vittorio Scaperrotta",
   "license": "MIT",
   "type": "module",
@@ -11,12 +14,29 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "vite": "^6.0.5"
-  },
   "dependencies": {
+    "@types/chrome": "^0.0.290",
+    "fs-extra": "^11.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-feather": "^2.0.10",
+    "sass": "^1.83.1",
+    "terser": "^5.37.0",
     "vite-plugin-static-copy": "^2.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "vite": "^6.0.5"
   }
 }

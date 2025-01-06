@@ -1,0 +1,28 @@
+.footer__container {
+  align-items: center;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+
+  .footer__message {
+    font-size: 12px;
+  }
+
+  .footer_links {
+    align-items: center;
+    display: flex;
+  }
+
+  .external__link {
+    color: #000;
+    display: flex;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(165, 21, 88);
+      cursor: pointer;
+    }
+  }
+}
