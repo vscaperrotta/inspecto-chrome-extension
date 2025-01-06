@@ -1,0 +1,22 @@
+{
+  "name": "css-scanner-chrome-extension",
+  "version": "0.0.0",
+  "author": "Vittorio Scaperrotta",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">= 20.18.0"
+  },
+  "packageManager": "yarn@4.5.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "vite-plugin-static-copy": "^2.2.0"
+  }
+}
