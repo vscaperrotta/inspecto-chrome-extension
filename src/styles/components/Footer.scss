@@ -1,6 +1,6 @@
 .footer__container {
   align-items: center;
-  background-color: #e6e6e6;
+  // background-color: #e6e6e6;
   display: flex;
   justify-content: space-between;
   padding: 16px;
@@ -18,10 +18,12 @@
   .external__link {
     color: #000;
     display: flex;
+    opacity: .7;
     text-decoration: none;
+    transition: all .3s ease-in-out;
 
     &:hover {
-      color: rgb(165, 21, 88);
+      opacity: 1;
       cursor: pointer;
     }
   }

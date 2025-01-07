@@ -11,13 +11,16 @@
     tooltipEl.id = "css-scanner-tooltip";
     tooltipEl.style.position = "fixed";
     tooltipEl.style.zIndex = "999999";
-    tooltipEl.style.padding = "8px";
-    tooltipEl.style.borderRadius = "6px";
-    tooltipEl.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+    tooltipEl.style.padding = "12px";
+    tooltipEl.style.borderRadius = "12px";
+    tooltipEl.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+    tooltipEl.style.boxShadow = "0 0 12px rgba(0, 0, 0, 0.3)";
     tooltipEl.style.color = "#fff";
+    tooltipEl.style.fontFamily = "Sans-Serif";
     tooltipEl.style.fontSize = "12px";
     tooltipEl.style.pointerEvents = "none";
     tooltipEl.style.display = "none";
+    tooltipEl.style.minWidth = "280px";
     document.body.appendChild(tooltipEl);
   }
 
@@ -31,16 +34,100 @@
     const color = styles.getPropertyValue("color");
     const bg = styles.getPropertyValue("background-color");
     const fontSize = styles.getPropertyValue("font-size");
+    const fontFamily = styles.getPropertyValue("font-family");
     const margin = styles.getPropertyValue("margin");
     const padding = styles.getPropertyValue("padding");
+    const height = styles.getPropertyValue("height");
+    const width = styles.getPropertyValue("width");
 
     tooltipEl.innerHTML = `
-      <strong>Tag:</strong> ${el.tagName.toLowerCase()} <br/>
-      <strong>Color:</strong> ${color} <br/>
-      <strong>Background:</strong> ${bg} <br/>
-      <strong>Font-Size:</strong> ${fontSize} <br/>
-      <strong>Margin:</strong> ${margin} <br/>
-      <strong>Padding:</strong> ${padding}
+      <div style="display: flex;">
+        <span style="
+          color: rgb(21, 213, 224);
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        ">${el.tagName.toLowerCase()}</span>
+      </div>
+      <br/>
+      <div style="display: flex; gap: 4px;">
+        <span style="
+          color: rgba(255,255,255, .8);
+          letter-spacing: 1px;
+        ">
+        ${width}x${height}
+        </span>
+      </div>
+      <br/>
+      <div style="display: flex; gap: 4px;">
+        <span style="
+          color: rgba(255,255,255, .8);
+          letter-spacing: 1px;
+        ">
+        Aa ${fontFamily}
+        </span>
+      </div>
+      <br/>
+      <br/>
+      <div style="display: flex;">
+        <span style="
+          color: rgb(198, 84, 115);
+          font-weight: bold;
+          letter-spacing: 1px;
+        ">Color: </span>
+        <span style="
+          color: #fff;
+          letter-spacing: 1px;
+        ">${color}</span>
+      </div>
+      <br/>
+      <div style="display: flex;">
+        <span style="
+          color: rgb(198, 84, 115);
+          font-weight: bold;
+          letter-spacing: 1px;
+        ">Background: </span>
+        <span style="
+          color: #fff;
+          letter-spacing: 1px;
+        ">${bg}</span>
+      </div>
+      <br/>
+      <div style="display: flex;">
+        <span style="
+          color: rgb(198, 84, 115);
+          font-weight: bold;
+          letter-spacing: 1px;
+        ">Font-Size: </span
+         <span style="
+          color: #fff;
+          letter-spacing: 1px;
+         ">${fontSize}</span>
+      </div>
+      <br/>
+      <div style="display: flex;">
+        <span style="
+          color: rgb(198, 84, 115);
+          font-weight: bold;
+          letter-spacing: 1px;
+        ">Margin: </span>
+        <span style="
+          color: #fff;
+          letter-spacing: 1px;
+        ">${margin}</span>
+      </div>
+      <br/>
+      <div style="display: flex;">
+        <span style="
+          color: rgb(198, 84, 115);
+          font-weight: bold;
+          letter-spacing: 1px;
+        ">Padding: </span>
+        <span style="
+          color: #fff;
+          letter-spacing: 1px;
+        ">${padding}</span>
+      </div>
     `;
   }
 

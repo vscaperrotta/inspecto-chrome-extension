@@ -29,7 +29,6 @@ export default defineConfig({
     alias: {
       Assets: `${APP_DIR}/assets`,
       Components: `${APP_DIR}/components`,
-      // Containers: `${APP_DIR}/containers`,
       Style: `${APP_DIR}/styles`,
       Utils: `${APP_DIR}/utils`,
     },
@@ -37,10 +36,5 @@ export default defineConfig({
   build: {
     minify: "terser",
     assetsDir: 'assets',
-    // rollupOptions: {
-    //   output: {
-    //     assetFileNames: 'fonts/Ubuntu/[name].[hash][extname]',
-    //   },
-    // },
   },
 })

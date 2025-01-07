@@ -1,6 +1,8 @@
 import { useState } from 'react'
 // import Header from 'Components/Header';
+import MainButton from 'Components/MainButton';
 import Footer from 'Components/Footer';
+import './App.scss';
 
 function App() {
   const [isOn, setIsOn] = useState(false);
@@ -19,18 +21,16 @@ function App() {
 
   return (
     <>
-      <div className="app__container">
+      <div className="app">
         {/* <Header /> */}
-        <div className="content">
-          <button
-            className={`button ${isOn ? "on" : "off"}`}
+        <main className="content">
+          <MainButton
+            isOn={isOn}
             onClick={handleToggle}
-          >
-            {isOn ? "ON" : "OFF"}
-          </button>
-        </div>
+          />
+        </main>
         <Footer />
-      </div>
+      </div >
     </>
   )
 }

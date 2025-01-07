@@ -9,9 +9,13 @@ function Footer({ }) {
       <p className="footer__message">
         {`© ${now} CSS Scanner`}
       </p>
-
       <div className="footer_links">
-        <a className='external__link' target='_blank' title='github repository'>
+        <a
+          className='external__link'
+          href='https://github.com/vscaperrotta/css-scanner-chrome-extension'
+          target='_blank'
+          title='github repository'
+        >
           <Icon.GitHub size={20} />
         </a>
       </div>
