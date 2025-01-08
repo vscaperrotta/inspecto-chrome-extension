@@ -1,4 +1,3 @@
-// import fs from 'fs';
 import fs from 'fs-extra';
 import { getManifest } from '../src/manifest.js';
 
