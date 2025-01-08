@@ -1,4 +1,3 @@
-
 (function () {
   let tooltipEl = null;
   let highlightedEl = null;

@@ -1,15 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import Header from 'Components/Header';
-import MainButton from 'Components/MainButton';
 import Footer from 'Components/Footer';
+import MainButton from 'Components/MainButton';
+import { isDev } from '../config/utils';
 import './App.scss';
 
 function App() {
   const [isOn, setIsOn] = useState(false);
 
+  useEffect(() => {
+    if (!isDev) {
+      chrome.storage.sync.get(['isOn'], (data) => {
+        if (typeof data.isOn !== 'undefined') {
+          setIsOn(data.isOn);
+        }
+      });
+    }
+  }, []);
+
   const handleToggle = async () => {
     const newState = !isOn;
     setIsOn(newState);
+
+    if (!isDev) {
+      chrome.storage.sync.set({ isOn: newState });
+    }
 
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -30,9 +45,9 @@ function App() {
           />
         </main>
         <Footer />
-      </div >
+      </div>
     </>
   )
 }
 
-export default App
+export default App;

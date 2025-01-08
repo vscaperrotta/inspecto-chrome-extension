@@ -12,13 +12,28 @@
   },
   "packageManager": "yarn@4.5.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "better-npm-run dev",
+    "build": "better-npm-run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "betterScripts": {
+    "dev": {
+      "command": "vite",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build": {
+      "command": "vite build",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
   "dependencies": {
     "@types/chrome": "^0.0.290",
+    "better-npm-run": "^0.1.1",
     "fs-extra": "^11.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

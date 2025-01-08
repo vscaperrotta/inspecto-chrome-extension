@@ -1237,6 +1237,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"better-npm-run@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "better-npm-run@npm:0.1.1"
+  dependencies:
+    commander: "npm:^2.9.0"
+    dotenv: "npm:^2.0.0"
+    object-assign: "npm:^4.0.1"
+  bin:
+    better-npm-run: index.js
+    bnr: index.js
+  checksum: 10c0/4e30a0b438c5f3d357f4f283da174ff593d4e168bed82f19ec2d951efe835e5ec48e094b03b957187277a75077f545eebf0862fc6e611ce0159bd43a012ffbdc
+  languageName: node
+  linkType: hard
+
 "binary-extensions@npm:^2.0.0":
   version: 2.3.0
   resolution: "binary-extensions@npm:2.3.0"
@@ -1420,7 +1434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^2.20.0":
+"commander@npm:^2.20.0, commander@npm:^2.9.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: 10c0/74c781a5248c2402a0a3e966a0a2bba3c054aad144f5c023364be83265e796b20565aa9feff624132ff629aa64e16999fa40a743c10c12f7c61e96a794b99288
@@ -1461,6 +1475,7 @@ __metadata:
     "@types/react": "npm:^18.3.18"
     "@types/react-dom": "npm:^18.3.5"
     "@vitejs/plugin-react": "npm:^4.3.4"
+    better-npm-run: "npm:^0.1.1"
     eslint: "npm:^9.17.0"
     eslint-plugin-react: "npm:^7.37.2"
     eslint-plugin-react-hooks: "npm:^5.0.0"
@@ -1573,6 +1588,13 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 10c0/b6416aaff1f380bf56c3b552f31fdf7a69b45689368deca72d28636f41c16bb28ec3ebc40ace97db4c1afc0ceeb8120e8492fe0046841c94c2933b2e30a7d5ac
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "dotenv@npm:2.0.0"
+  checksum: 10c0/055740ff063371055f9977af238a61396b12adaebd16b40c9b8d960378a709d098507468b03a5080cbaaaf67b8985b11aabe619e5fffced796eb765b00a03359
   languageName: node
   linkType: hard
 
@@ -3159,7 +3181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.1.1":
+"object-assign@npm:^4.0.1, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: 10c0/1f4df9945120325d041ccf7b86f31e8bcc14e73d29171e37a7903050e96b81323784ec59f93f102ec635bcf6fa8034ba3ea0a8c7e69fa202b87ae3b6cec5a414

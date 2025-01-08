@@ -14,8 +14,9 @@
   },
   "permissions": [
     "activeTab",
-    "tabs",
     "bookmarks",
+    "tabs",
+    "storage",
     "scripting"
   ],
   "host_permissions": [

@@ -2,7 +2,7 @@
   background: #cacaca;
   border: 0;
   border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, .6);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
   color: #fff;
   font-weight: bold;
   min-height: 32px;
@@ -20,7 +20,7 @@
   }
 
   &:hover {
-    box-shadow: 0 0 12px rgba(0, 0, 0, .8);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
   }
 
   &.main-button--off {
