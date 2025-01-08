@@ -31,6 +31,7 @@
     tooltipEl.style.display = "block";
 
     const styles = window.getComputedStyle(el);
+
     const color = styles.getPropertyValue("color");
     const bg = styles.getPropertyValue("background-color");
     const fontSize = styles.getPropertyValue("font-size");
@@ -158,14 +159,12 @@
     highlightElement(target);
   }
 
-
   function onMouseMove(e) {
     if (!enabled) return;
     if (highlightedEl) {
       showTooltip(highlightedEl, e.clientX, e.clientY);
     }
   }
-
 
   function onMouseOut() {
     if (!enabled) return;
@@ -181,7 +180,6 @@
   document.addEventListener("mouseover", onMouseOver);
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mouseout", onMouseOut);
-
 
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "TOGGLE") {
