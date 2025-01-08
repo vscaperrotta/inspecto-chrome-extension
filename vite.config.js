@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { viteStaticCopy } from 'vite-plugin-static-copy';
-import paths from './config/paths';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+import paths from './config/paths'
 
-const APP_DIR = paths.appSrc;
+const APP_DIR = paths.appSrc
 
 export default defineConfig({
   plugins: [
@@ -11,13 +11,13 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "src/background/background.js",
-          dest: "."
-        },
-        {
-          src: "src/content/content.js",
-          dest: "."
+          src: 'public/icons',
+          dest: ''
         }
+        // {
+        //   src: 'src/content',
+        //   dest: '.'
+        // },
       ],
     }),
   ],
@@ -30,7 +30,17 @@ export default defineConfig({
     },
   },
   build: {
-    minify: "terser",
+    minify: 'terser',
     assetsDir: 'assets',
-  },
+    rollupOptions: {
+      input: {
+        index: 'index.html',
+        content: 'src/content/content.js',
+        // background: 'src/background/background.js',
+      },
+      output: {
+        entryFileNames: '[name].js'
+      }
+    }
+  }
 })

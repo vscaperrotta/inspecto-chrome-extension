@@ -1,26 +1,22 @@
 .main-button {
-  background: #cacaca;
+  align-items: center;
   border: 0;
-  border-radius: 8px;
+  border-radius: .5rem;
   box-shadow: var(--main-button-box-shadow);
   color: #fff;
-  font-weight: bold;
-  min-height: 32px;
-  min-width: 64px;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  min-height: 2rem;
+  min-width: 10rem;
   outline: 0;
-  padding: 16px 24px;
-  position: relative;
-  transition: all .3s ease-in-out;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  transition: all .1s ease-in-out;
 
-  svg {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:hover {
-    box-shadow: var(--main-button-box-shadow-hover);
+  &:active {
+    box-shadow: var(--main-button-box-shadow-focus);
+    transform: translateY(2px);
   }
 
   &.main-button--off {

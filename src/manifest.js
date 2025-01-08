@@ -25,9 +25,9 @@ export async function getManifest() {
     host_permissions: [
       "<all_urls>"
     ],
-    background: {
-      "service_worker": "background.js"
-    },
+    // background: {
+    //   "service_worker": "background.js"
+    // },
     content_scripts: [
       {
         matches: [
