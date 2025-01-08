@@ -19,7 +19,8 @@
     tooltipEl.style.fontSize = "12px";
     tooltipEl.style.pointerEvents = "none";
     tooltipEl.style.display = "none";
-    tooltipEl.style.minWidth = "280px";
+    tooltipEl.style.maxWidth = "280px";
+    tooltipEl.style.width = "100%";
     document.body.appendChild(tooltipEl);
   }
 
@@ -36,8 +37,8 @@
     const fontFamily = styles.getPropertyValue("font-family");
     const margin = styles.getPropertyValue("margin");
     const padding = styles.getPropertyValue("padding");
-    const height = styles.getPropertyValue("height");
-    const width = styles.getPropertyValue("width");
+    const height = styles.getPropertyValue("height").replace('px', '');
+    const width = styles.getPropertyValue("width").replace('px', '');
 
     tooltipEl.innerHTML = `
       <div style="display: flex;">
@@ -54,7 +55,7 @@
           color: rgba(255,255,255, .8);
           letter-spacing: 1px;
         ">
-        ${width}x${height}
+        <strong>${width}</strong>x<strong>${height}</strong>
         </span>
       </div>
       <br/>
