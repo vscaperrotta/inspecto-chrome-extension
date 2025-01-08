@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-// import Header from 'Components/Header';
 import Footer from 'Components/Footer';
 import MainButton from 'Components/MainButton';
+// import Settings from 'Components/Settings';
 import { isDev } from '../config/utils';
 import './App.scss';
 
@@ -37,12 +37,12 @@ function App() {
   return (
     <>
       <div className="app">
-        {/* <Header /> */}
-        <main className="content">
+        <main className="main">
           <MainButton
             isOn={isOn}
             onClick={handleToggle}
           />
+          {/* <Settings /> */}
         </main>
         <Footer />
       </div>

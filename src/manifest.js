@@ -1,13 +1,14 @@
-import fs from 'fs';
-import Pkg from '../../package.json';
+import fs from 'fs-extra';
+import path from 'path';
 
-function _getManifest() {
+export async function getManifest() {
+  const pkg = await fs.readJSON(path.resolve('package.json'));
 
   const manifest = {
     manifest_version: 3,
-    name: Pkg.displayName || Pkg.name,
-    version: Pkg.version,
-    description: Pkg.description,
+    name: pkg.displayName || pkg.name,
+    version: pkg.version,
+    description: pkg.description,
     action: {
       default_popup: "index.html",
       default_icon: "icon.png"
@@ -27,9 +28,6 @@ function _getManifest() {
     host_permissions: [
       "<all_urls>"
     ],
-    background: {
-      service_worker: "background.js"
-    },
     content_scripts: [
       {
         matches: [
@@ -44,10 +42,4 @@ function _getManifest() {
   }
 
   return manifest
-}
-
-export function writeManifest() {
-  const manifest = _getManifest();
-  const manifestString = JSON.stringify(manifest, null, 2);
-  fs.writeFileSync('../../public/manifest.json', manifestString, 'utf8');
 }
