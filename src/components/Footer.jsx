@@ -1,13 +1,14 @@
-
+// import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
+import Pkg from '../../package.json';
 
-function Footer({ }) {
+function Footer() {
   const now = new Date().getFullYear();
 
   return (
     <div className="footer__container">
       <p className="footer__message">
-        {`© ${now} CSS Scanner`}
+        {`© ${now} ${Pkg.displayName || ''}`}
       </p>
       <div className="footer_links">
         <a
@@ -22,5 +23,9 @@ function Footer({ }) {
     </div>
   )
 }
+
+Footer.propTypes = {
+  // Add here some propTypes
+};
 
 export default Footer;

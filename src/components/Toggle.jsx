@@ -1,4 +1,6 @@
-function Toggle({ }) {
+// import PropTypes from 'prop-types';
+
+function Toggle() {
 
   return (
     <label className="toggle__container">
@@ -7,5 +9,9 @@ function Toggle({ }) {
     </label>
   )
 }
+
+Toggle.propTypes = {
+  // Add here some propTypes
+};
 
 export default Toggle;

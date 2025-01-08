@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function MainButton({ isOn, onClick }) {
   return (
     <button
@@ -8,5 +10,11 @@ function MainButton({ isOn, onClick }) {
     </button>
   )
 }
+
+MainButton.propTypes = {
+  // Add here some propTypes
+  isOn: PropTypes.bool,
+  onClick: PropTypes.func,
+};
 
 export default MainButton;

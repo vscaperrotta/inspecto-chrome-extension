@@ -1,21 +1,24 @@
 {
   "name": "css-scanner-chrome-extension",
-  "displayName": "CSS Scanner",
-  "description": "A simple CSS scanner React-Base as a Chrome extension",
-  "version": "0.0.0",
+  "displayName": "CSS Inspector",
+  "description": "A CSS scanner to inspect DOM on any websites",
+  "version": "0.0.1",
   "private": true,
   "author": "Vittorio Scaperrotta",
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">= 20.18.0"
+    "node": ">= 20.18.x"
   },
   "packageManager": "yarn@4.5.0",
   "scripts": {
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
+    "build:prepare": "node scripts/prepare.js",
+    "build:web": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "better-npm-run preview",
+    "clear": "rimraf --glob dist"
   },
   "betterScripts": {
     "dev": {
@@ -25,9 +28,15 @@
       }
     },
     "build": {
-      "command": "vite build",
+      "command": "run clear && run build:web && run build:prepare",
       "env": {
         "NODE_ENV": "production"
+      }
+    },
+    "preview": {
+      "command": "vite preview",
+      "env": {
+        "NODE_ENV": "development"
       }
     }
   },
@@ -38,6 +47,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-feather": "^2.0.10",
+    "rimraf": "^6.0.1",
     "sass": "^1.83.1",
     "terser": "^5.37.0",
     "vite-plugin-static-copy": "^2.2.0"

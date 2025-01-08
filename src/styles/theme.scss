@@ -7,24 +7,31 @@
   color: #213547;
   background-color: #ffffff;
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  // Main Button
+  --main-button-box-shadow: 0 0 4px rgba(255, 255, 255, .2);
+  --main-button-box-shadow-hover: 0 0 4px rgba(255, 255, 255, .2);
+
+  // Footer
+  --footer-icon-color: #333;
+  --footer-icon-color-hover: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
-  }
 
-  .main-button {
-    box-shadow: 0 0 4px rgba(255, 255, 255, .2);
+    // Main Button
+    --main-button-box-shadow: 0 0 4px rgba(255, 255, 255, .2);
+    --main-button-box-shadow-hover: 0 0 12px rgba(255, 255, 255, .4);
 
-    &:hover {
-      box-shadow: 0 0 12px rgba(255, 255, 255, .4);
-    }
+    // Footer
+    --footer-icon-color: #eee;
+    --footer-icon-color-hover: #fff;
   }
 }
