@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "CSS Scanner Chrome Extension",
+  "version": "1.0.0",
+  "description": "A simple CSS scanner React-Base as a Chrome extension",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "bookmarks",
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "match_origin_as_fallback": true,
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
