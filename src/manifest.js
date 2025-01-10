@@ -10,7 +10,6 @@ export async function getManifest() {
     version: pkg.version,
     description: pkg.description,
     action: {
-      default_popup: "index.html",
       default_icon: "icon.png"
     },
     icons: {
@@ -20,10 +19,6 @@ export async function getManifest() {
     },
     permissions: [
       "activeTab",
-      "bookmarks",
-      "tabs",
-      "storage",
-      "scripting"
     ],
     host_permissions: [
       "<all_urls>"
