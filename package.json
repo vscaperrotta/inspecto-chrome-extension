@@ -43,6 +43,7 @@
   "dependencies": {
     "@types/chrome": "^0.0.290",
     "better-npm-run": "^0.1.1",
+    "cross-env": "^7.0.3",
     "fs-extra": "^11.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -50,7 +51,8 @@
     "rimraf": "^6.0.1",
     "sass": "^1.83.1",
     "terser": "^5.37.0",
-    "vite-plugin-static-copy": "^2.2.0"
+    "vite-plugin-static-copy": "^2.2.0",
+    "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

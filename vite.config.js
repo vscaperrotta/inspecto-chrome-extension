@@ -14,10 +14,6 @@ export default defineConfig({
           src: 'public/icons',
           dest: ''
         }
-        // {
-        //   src: 'src/content',
-        //   dest: '.'
-        // },
       ],
     }),
   ],
@@ -34,9 +30,8 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       input: {
-        index: 'index.html',
         content: 'src/content/content.js',
-        // background: 'src/background/background.js',
+        background: 'src/background/background.js',
       },
       output: {
         entryFileNames: '[name].js'

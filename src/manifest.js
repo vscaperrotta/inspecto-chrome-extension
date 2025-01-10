@@ -10,7 +10,6 @@ export async function getManifest() {
     version: pkg.version,
     description: pkg.description,
     action: {
-      default_popup: "index.html",
       default_icon: "icon.png"
     },
     icons: {
@@ -20,14 +19,13 @@ export async function getManifest() {
     },
     permissions: [
       "activeTab",
-      "storage",
     ],
     host_permissions: [
       "<all_urls>"
     ],
-    // background: {
-    //   "service_worker": "background.js"
-    // },
+    background: {
+      "service_worker": "background.js"
+    },
     content_scripts: [
       {
         matches: [

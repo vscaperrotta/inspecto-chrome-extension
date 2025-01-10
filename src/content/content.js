@@ -43,7 +43,7 @@ setupMouseEvents({
 
 // Ascolto dei messaggi per toggle
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === "TOGGLE") {
+  if (request.type === "TOGGLE_EXTENSION") {
     setEnabled(request.value);
 
     if (!request.value) {

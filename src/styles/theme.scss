@@ -11,31 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  // Main Button
-  --main-button-box-shadow: 0 4px 0px rgb(150, 150, 150);
-  --main-button-box-shadow-focus: 0 2px 0px rgb(40, 40, 40);
-
-  // Footer
-  --footer-border-top: #333;
-  --footer-background: #999;
-  --footer-icon-color: #333;
-  --footer-icon-color-hover: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color: rgba(255, 255, 255);
     background-color: #242424;
-
-    // Main Button
-    --main-button-box-shadow: 0 4px 0px rgb(200, 200, 200);
-    --main-button-box-shadow-focus: 0 2px 0px rgb(120, 120, 120);
-
-    // Footer
-    --footer-border-top: #eee;
-    --footer-background: #444;
-    --footer-icon-color: #eee;
-    --footer-icon-color-hover: #fff;
   }
 }
