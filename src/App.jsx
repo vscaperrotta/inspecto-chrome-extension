@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import Footer from 'Components/Footer';
 import MainButton from 'Components/MainButton';
 // import Settings from 'Components/Settings';
@@ -24,30 +24,35 @@ function App() {
 
     if (!isDev) {
       chrome.storage.sync.set({ isOn: newState });
+
+      try {
+        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+        if (tab && tab.id) {
+          chrome.tabs.sendMessage(tab.id, {
+            type: "TOGGLE",
+            value: newState,
+          });
+        } else {
+          console.error("Nessuna scheda attiva trovata.");
+        }
+      } catch (error) {
+        console.error("Errore durante l'invio del messaggio alla scheda attiva:", error);
+      }
     }
-
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    chrome.tabs.sendMessage(tab.id, {
-      type: "TOGGLE",
-      value: newState
-    });
   };
 
   return (
     <>
       <div className="app">
         <main className="main">
-          <MainButton
-            isOn={isOn}
-            onClick={handleToggle}
-          />
+          <MainButton isOn={isOn} onClick={handleToggle} />
           {/* <Settings /> */}
         </main>
         <Footer />
       </div>
     </>
-  )
+  );
 }
 
 export default App;

@@ -19,7 +19,7 @@ export async function getManifest() {
       128: "icon.png"
     },
     permissions: [
-      "tabs",
+      "activeTab",
       "storage",
     ],
     host_permissions: [
