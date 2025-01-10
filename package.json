@@ -2,7 +2,7 @@
   "name": "css-scanner-chrome-extension",
   "displayName": "CSS Inspector",
   "description": "A CSS scanner to inspect DOM on any websites",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "author": "Vittorio Scaperrotta",
   "license": "MIT",
