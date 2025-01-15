@@ -2,7 +2,7 @@
 
 **CSS Scanner** is a Google Chrome extension designed to simplify the analysis of CSS at a glance.
 
-![css-inspector](assets/preview.jpg)
+![css-inspector](assets/Screenshot%202025-01-16%20000148.png)
 
 ## Features
 - Scans the page to identify which CSS rules are actually used, highlighting potential redundancies or errors.
