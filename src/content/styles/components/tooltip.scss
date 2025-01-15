@@ -1,0 +1,14 @@
+.css-tooltip__container {
+  background: var(--tooltip-background);
+  border-radius: .6rem;
+  box-shadow: 0 .2rem .8rem rgba(0, 0, 0, .2);
+  box-sizing: border-box;
+  color: var(--tooltip-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  pointer-events: none;
+  position: fixed;
+  z-index: 999999;
+  width: 18rem;
+}

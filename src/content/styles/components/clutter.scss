@@ -1,0 +1,140 @@
+.css-clutter__container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: 90%;
+  width: 100%;
+
+  .css-clutter__margin {
+    align-items: center;
+    background-color: var(--clutter-margin-background);
+    border-radius: .4rem;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .css-clutter__margin-value {
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 9999;
+
+    &.disabled {
+      font-weight: 400;
+      opacity: .7;
+    }
+
+    &--top {
+      top: .15rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--bottom {
+      bottom: .15rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--left {
+      left: .5rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--right {
+      right: .5rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .css-clutter__padding {
+    align-items: center;
+    background-color: var(--clutter-padding-background);
+    border-radius: .4rem;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .css-clutter__padding-value {
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 9999;
+
+    &.disabled {
+      font-weight: 400;
+      opacity: .7;
+    }
+
+    &--top {
+      top: .15rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--bottom {
+      bottom: .15rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--left {
+      left: .5rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--right {
+      right: .5rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .css-clutter__size {
+    align-items: center;
+    background-color: var(--clutter-size-background);
+    border-radius: .4rem;
+    display: flex;
+    font-weight: 600;
+    height: 2rem;
+    justify-content: center;
+    position: relative;
+    width: 6rem;
+  }
+
+  .css-clutter__size-value {
+    color: #fff;
+
+    .value {
+      font-weight: 600;
+    }
+
+    .cross {
+      font-weight: 400;
+    }
+  }
+
+  .css-clutter__label {
+    color: #fff;
+    left: .5rem;
+    font-size: .6rem;
+    font-weight: 600;
+    opacity: .5;
+    position: absolute;
+    top: .15rem;
+  }
+}

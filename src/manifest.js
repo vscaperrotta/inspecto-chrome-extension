@@ -24,7 +24,7 @@ export async function getManifest() {
       "<all_urls>"
     ],
     background: {
-      "service_worker": "background.js"
+      "service_worker": "assets/background.js"
     },
     content_scripts: [
       {
@@ -33,7 +33,10 @@ export async function getManifest() {
         ],
         match_origin_as_fallback: true,
         js: [
-          "content.js"
+          "assets/content.js"
+        ],
+        css: [
+          "assets/content.css"
         ]
       }
     ]

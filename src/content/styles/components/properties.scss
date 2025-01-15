@@ -1,0 +1,33 @@
+.css-properties__container {
+  background-color: var(--properties-background);
+  border-radius: .4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: .5rem;
+  width: 100%;
+
+  .css-property__value {
+    color: var(--properties-color);
+    display: inline-flex;
+    gap: .5rem;
+    margin: 0 0 .4rem;
+    padding: 0;
+    width: 100%;
+    white-space: break-spaces;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .css-property__key {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .css-property__value {
+    font-weight: 400;
+  }
+}
