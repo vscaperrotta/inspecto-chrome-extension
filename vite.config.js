@@ -1,40 +1,32 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
-import paths from './config/paths'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import paths from './config/paths';
 
-const APP_DIR = paths.appSrc
+const APP_DIR = paths.appSrc;
 
 export default defineConfig({
   plugins: [
     react(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'public/icons',
-          dest: ''
-        }
-      ],
-    }),
   ],
   resolve: {
     alias: {
-      Assets: `${APP_DIR}/assets`,
-      Components: `${APP_DIR}/components`,
+      Background: `${APP_DIR}/background`,
+      Content: `${APP_DIR}/content`,
       Style: `${APP_DIR}/styles`,
       Utils: `${APP_DIR}/utils`,
     },
   },
   build: {
-    minify: 'terser',
-    assetsDir: 'assets',
     rollupOptions: {
       input: {
-        content: 'src/content/content.js',
-        background: 'src/background/background.js',
+        background: path.resolve(APP_DIR, 'background', 'index.js'),
+        content: path.resolve(APP_DIR, 'content', 'index.jsx'),
       },
       output: {
-        entryFileNames: '[name].js'
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       }
     }
   }

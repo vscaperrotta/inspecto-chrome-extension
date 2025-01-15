@@ -1,0 +1,7 @@
+.css-border__container {
+  border: .15rem solid var(--border-color);
+  box-sizing: border-box;
+  pointer-events: none;
+  position: absolute;
+  z-index: 999999;
+}
