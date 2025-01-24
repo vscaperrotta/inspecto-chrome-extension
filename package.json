@@ -1,8 +1,8 @@
 {
-  "name": "css-scanner-chrome-extension",
+  "name": "inspecto-chrome-extension",
   "displayName": "インスペクト",
   "description": "インスペクト [Inspecto] is usefull to inspect DOM on any websites",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "author": "Vittorio Scaperrotta",
   "license": "MIT",
