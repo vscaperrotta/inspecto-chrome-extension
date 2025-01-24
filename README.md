@@ -26,7 +26,7 @@
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/vscaperrotta/css-inspector-chrome-extension
+   git clone https://github.com/vscaperrotta/inspecto-chrome-extension
    ```
 2. Install dependencies with Yarn:
    ```bash
