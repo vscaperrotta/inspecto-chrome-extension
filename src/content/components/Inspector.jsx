@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { nullSafe, computeContentSize } from 'Utils/globalMethods';
+import { useEffect, useState } from 'react';
+import { nullSafe, computeContentSize } from '@utils/globalMethods';
 import Border from './Border';
 import Clutter from './Clutter';
 import Font from './Font';

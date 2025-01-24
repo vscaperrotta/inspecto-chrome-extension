@@ -11,10 +11,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      Background: `${APP_DIR}/background`,
-      Content: `${APP_DIR}/content`,
-      Style: `${APP_DIR}/styles`,
-      Utils: `${APP_DIR}/utils`,
+      '@background': `${APP_DIR}/background`,
+      '@content': `${APP_DIR}/content`,
+      '@utils': `${APP_DIR}/utils`,
     },
   },
   build: {

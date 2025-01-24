@@ -1,5 +1,9 @@
-function Tag({ tag, classes }) {
+import PropTypes from "prop-types";
 
+function Tag({
+  tag = '',
+  classes = ''
+}) {
   return (
     <div className="css-tag__container">
       <p className="css-tag__text">
@@ -13,5 +17,10 @@ function Tag({ tag, classes }) {
     </div>
   );
 }
+
+Tag.propTypes = {
+  tag: PropTypes.string,
+  classes: PropTypes.string
+};
 
 export default Tag;
