@@ -1,4 +1,5 @@
-import { nullSafe } from 'Utils/globalMethods';
+import PropTypes from "prop-types";
+import { nullSafe } from '@utils/globalMethods';
 
 function Tooltip({ mousePos, children }) {
 
@@ -14,5 +15,10 @@ function Tooltip({ mousePos, children }) {
     </div>
   );
 }
+
+Tooltip.propTypes = {
+  mousePos: PropTypes.object,
+  children: PropTypes.node,
+};
 
 export default Tooltip;

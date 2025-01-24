@@ -1,6 +1,6 @@
-import { nullSafe } from 'Utils/globalMethods';
+import PropTypes from "prop-types";
 
-function Font({ fontFamily }) {
+function Font({ fontFamily = '' }) {
 
   return (
     <div className="css-font__container">
@@ -15,5 +15,9 @@ function Font({ fontFamily }) {
     </div>
   );
 }
+
+Font.propTypes = {
+  fontFamily: PropTypes.string
+};
 
 export default Font;

@@ -1,5 +1,13 @@
+// Theme
 @use './theme';
-@use './components/index';
+
+// Components
+@use './components/border';
+@use './components/clutter';
+@use './components/font';
+@use './components/properties';
+@use './components/tag';
+@use './components/tooltip';
 
 #css-inspector-content-script {
   left: 0;
@@ -12,5 +20,9 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
   }
 }

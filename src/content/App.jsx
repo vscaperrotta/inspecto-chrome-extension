@@ -1,11 +1,10 @@
-import React from 'react';
-import Inspector from './components/Inspector';
 import './styles/main.scss';
 
 export default function App() {
   return (
-    <div style={{ pointerEvents: 'none' }}>
-      <Inspector />
+    <div>
+      <h1>Chrome Extension Arc</h1>
+      <p>The extension is based on React</p>
     </div>
   );
 }

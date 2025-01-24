@@ -1,11 +1,17 @@
-import { nullSafe } from 'Utils/globalMethods';
+import PropTypes from "prop-types";
 
-function Clutter({ height, width, margin, padding }) {
-
+function Clutter({
+  height = '',
+  width = '',
+  margin = {},
+  padding = {}
+}) {
   return (
     <div className="css-clutter__container">
       <div className="css-clutter__margin">
-        <label className="css-clutter__label">margin</label>
+        <label className="css-clutter__label">
+          margin
+        </label>
         <p className={`css-clutter__margin-value css-clutter__margin-value--top ${margin.top === '0' ? 'disabled' : ''}`}>
           {margin.top}
         </p>
@@ -19,7 +25,9 @@ function Clutter({ height, width, margin, padding }) {
           {margin.bottom}
         </p>
         <div className="css-clutter__padding">
-          <label className="css-clutter__label">padding</label>
+          <label className="css-clutter__label">
+            padding
+          </label>
           <p className={`css-clutter__padding-value css-clutter__padding-value--top ${padding.top === '0' ? 'disabled' : ''}`}>
             {padding.top}
           </p>
@@ -44,5 +52,12 @@ function Clutter({ height, width, margin, padding }) {
     </div>
   );
 }
+
+Clutter.propTypes = {
+  height: PropTypes.string,
+  width: PropTypes.string,
+  margin: PropTypes.object,
+  padding: PropTypes.object
+};
 
 export default Clutter;
