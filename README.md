@@ -1,8 +1,18 @@
-# CSS Scanner Chrome Extension
+<h3 align='center'>インスペクト - Inspecto</h3>
+<p align='center'>Chrome Extension</p>
 
-**CSS Scanner** is a Google Chrome extension designed to simplify CSS analysis on a webpage.
+<br />
+<br />
+<div align='center'>
+   <img src='./assets/icon.png' width='64' />
+</div>
+<br />
+<br />
+<br />
 
-![CSS Inspector Screenshot](assets/Screenshot%202025-01-16%20000148.png)
+**Inspecto** is a Google Chrome extension designed to simplify CSS analysis on a webpage.
+
+![CSS Inspector Screenshot](assets/screenshot.png)
 
 ---
 
