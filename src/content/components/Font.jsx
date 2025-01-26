@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function Font({ fontFamily = '' }) {
 
   return (
@@ -16,8 +14,5 @@ function Font({ fontFamily = '' }) {
   );
 }
 
-Font.propTypes = {
-  fontFamily: PropTypes.string
-};
 
 export default Font;

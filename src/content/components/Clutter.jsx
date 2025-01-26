@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function Clutter({
   height = '',
   width = '',
@@ -53,11 +51,5 @@ function Clutter({
   );
 }
 
-Clutter.propTypes = {
-  height: PropTypes.string,
-  width: PropTypes.string,
-  margin: PropTypes.object,
-  padding: PropTypes.object
-};
 
 export default Clutter;

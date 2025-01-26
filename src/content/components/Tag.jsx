@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function Tag({
   tag = '',
   classes = ''
@@ -17,10 +15,5 @@ function Tag({
     </div>
   );
 }
-
-Tag.propTypes = {
-  tag: PropTypes.string,
-  classes: PropTypes.string
-};
 
 export default Tag;
