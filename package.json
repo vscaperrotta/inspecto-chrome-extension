@@ -2,7 +2,7 @@
   "name": "inspecto-chrome-extension",
   "displayName": "インスペクト - Inspecto",
   "description": "インスペクト [Inspecto] is usefull to inspect DOM on any websites",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "author": "Vittorio Scaperrotta",
   "license": "MIT",
