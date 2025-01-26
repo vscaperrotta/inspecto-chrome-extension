@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { nullSafe } from '@utils/globalMethods';
 
 function Border({ elementRect = {} }) {
@@ -15,9 +14,5 @@ function Border({ elementRect = {} }) {
     />
   );
 }
-
-Border.propTypes = {
-  elementRect: PropTypes.object,
-};
 
 export default Border;

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { nullSafe } from '@utils/globalMethods';
 
 function Properties({ properties = [] }) {
@@ -18,12 +17,5 @@ function Properties({ properties = [] }) {
     </div>
   );
 }
-
-Properties.propTypes = {
-  properties: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
-  })),
-};
 
 export default Properties;
