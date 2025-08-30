@@ -1,4 +1,4 @@
-<h3 align='center'>インスペクト - Inspecto</h3>
+<h3 align='center'>Inspecto - インスペクト</h3>
 <p align='center'>Chrome Extension</p>
 
 <br />
