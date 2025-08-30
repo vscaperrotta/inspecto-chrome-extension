@@ -1,14 +1,14 @@
 {
   "name": "inspecto-chrome-extension",
-  "displayName": "インスペクト - Inspecto",
-  "description": "インスペクト [Inspecto] is usefull to inspect DOM on any websites",
-  "version": "0.1.4",
+  "displayName": "Inspecto - Css inspector",
+  "description": "Inspecto [インスペクト] is usefull to inspect DOM on any websites",
+  "version": "0.1.5",
   "private": true,
   "author": "Vittorio Scaperrotta",
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">= 20.18.x"
+    "node": ">= 22.16.0"
   },
   "packageManager": "yarn@4.5.0",
   "scripts": {

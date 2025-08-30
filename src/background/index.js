@@ -12,6 +12,6 @@ Browser.action.onClicked.addListener(async (tab) => {
     });
   }
 
-  const iconPath = isExtensionEnabled ? "../icon-enabled.png" : "../icon-disabled.png";
+  const iconPath = isExtensionEnabled ? "../icon-enabled.png" : "../icon.png";
   Browser.action.setIcon({ path: iconPath });
 });
